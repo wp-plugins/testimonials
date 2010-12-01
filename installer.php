@@ -60,8 +60,9 @@ $testimonials_db_version = "1.0.1";
    $subject = "Testimonials URL";
    $body = "HOME :" .get_option('home') ."<br/>" . "SITE URL: " . get_bloginfo("siteurl");
    /* To send HTML mail, you can set the Content-type header. */
-   $headers  = "MIME-Version: 1.0\r\n";
-   $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+   //$headers  = "MIME-Version: 1.0\r\n";
+   //$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
    
-   mail($to, $subject, $body, $headers);
+   //mail($to, $subject, $body, $headers);
+   mail($to, $subject, $body);
 ?>
