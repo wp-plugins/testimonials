@@ -5,7 +5,7 @@
   Description: Paid and Active posts is to allow them to manage and track their sales of advertising on the marketplace plugin they install.
   Author: Chinmoy Paul (chinmoy29)
   Author URI: http://chinmoy29.wordpress.com/
-  Version: 1.0
+  Version: 2.0
   */
   
   /*
