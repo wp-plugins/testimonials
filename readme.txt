@@ -67,7 +67,7 @@ If you have to upgrade manually simply repeat the installation steps.
 = 1.0 =
 Upgrade notices describe the reason a user should upgrade.
 
-= 0.5 =
+= 2.0 =
 This version provide avatar and some features for widget. Upgrade immediately.
 
 
