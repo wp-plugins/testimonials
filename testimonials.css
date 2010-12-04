@@ -44,29 +44,29 @@ font-weight: normal;
 .right {float: right}
 .left {float: left}
 
-.avatar{
+.testimonials-avatar img{
 	z-index:4;
-	position: relative;
+	position: absolute;
 	opacity: 0.9999;
-	padding:3px;
-	right: 45px;
+	padding:3px;	
 	border: 1px solid #DADADA;
 	background: #FFFFFF;
 	-moz-box-shadow: 0 0 4px #AAAAAA;
 	float: right;
 }
 
-#testimonials_widget{
-	position: relative;
+/*#testimonials_widget{
+	position: relative!important;
 	height: 220px;
-}
+}*/
+.art-blockcontent-body #testimonials_widget li { background-image: none}
 #testimonials_widget li{
 	list-style: url(images/PostQuote.png);
 	list-style-position:inside;
 	margin-left: -15px;
 	padding: 10px 10px;
-	border-bottom: 1px solid #DADAD9;
-	background: #F5F5E5;
+	/*border-bottom: 1px solid #DADAD9;
+	background: #F5F5E5;*/
 	margin-bottom: 5px;
 	
 }

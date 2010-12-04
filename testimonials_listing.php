@@ -37,26 +37,22 @@
   
   if($_POST['isSave'] == '1'){
     $query= "UPDATE {$table_name} SET 
+            `image` = '{$_POST['image']}',
             `author` = '{$wpdb->escape(strip_tags(stripslashes($_POST['author'])))}',
-			`company` = '{$wpdb->escape(strip_tags(stripslashes($_POST['company'])))}',
-			`website` = '{$wpdb->escape(strip_tags(stripslashes($_POST['website'])))}',
-			`testimonials` = '{$wpdb->escape(stripslashes($_POST['testimonials']))}', 
+            `email` = '{$wpdb->escape(strip_tags(stripslashes($_POST['email'])))}',
+      			`company` = '{$wpdb->escape(strip_tags(stripslashes($_POST['company'])))}',
+      			`website` = '{$wpdb->escape(strip_tags(stripslashes($_POST['website'])))}',
+      			`testimonials` = '{$wpdb->escape(stripslashes($_POST['testimonials']))}', 
             `status` = '{$_POST['status']}'
             WHERE ID='{$_POST['post_id']}' ";
     $wpdb->query($query);
     echo '<div id="message" class="updated fade"><p>Testimonal-#'.$_POST['post_id'].' updated successfully.</p></div>';
   }
   
-  if(isset($_GET['d']) && ($_GET['d']=="yes")){
-    if($status == 'publish'){
-      $update_status = "UPDATE {$table_name} SET `status` = 'draft' WHERE ID='{$_GET['post']}'";
-      $wpdb->query($update_status);
-    }else{
+  if(isset($_GET['d']) && ($_GET['d']=="yes")){    
       $delPost = "DELETE FROM {$table_name} WHERE ID='{$_GET['post']}'";
       $wpdb->query($delPost);
-      echo '<div id="message" class="updated fade"><p>Post-#'.$_GET['post'].' deleted successfully.</p></div>';
-    }
-    
+      echo '<div id="message" class="updated fade"><p>Post-#'.$_GET['post'].' deleted successfully.</p></div>';    
   }
     $ttlRec = $wpdb->get_row("SELECT COUNT(*) TOTAL FROM $table_name", OBJECT);
     $pagination = new Pagination(admin_url() . 'admin.php?page=testimonials_listing.php', $ttlRec->TOTAL, PAGE_LIMIT, $page);
@@ -71,7 +67,7 @@
 		<thead>
 			<tr>
 				<th class="manage-column" width="3%">ID#</th>
-				<th class="manage-column" width="15%">Author</th>
+				<th class="manage-column" width="25%">Author</th>
 				<th class="manage-column">Testimonials</th>
 			</tr>
 		</thead>
@@ -80,12 +76,17 @@
             $odd = true;
             foreach($testimonials as $testimonial):
               $class=($odd) ? "alternate":"";
+              //Avatar 
+              if($testimonial->image == "avatar")
+                $avatar = "<div style='float: left; padding: 5px;position: relative;'>".get_avatar($testimonial->email, 48) . "</div>";
+              else
+			  	$avatar = "";
               echo "<tr class={$class}>\n".
                    "\t<td>{$testimonial->ID}</td>\n".
-                   "\t<td><b>{$testimonial->author}</b><br/>{$testimonial->company}<br/><a href='{$testimonial->website}' target='_blank'>{$testimonial->website}</a>
+                   "\t<td>{$avatar}<b>{$testimonial->author}</b><br/>{$testimonial->company}<br/><a href='{$testimonial->website}' target='_blank'>{$testimonial->website}</a>
                     <div class=\"row-actions\">
                     <span class='edit'><a href=\"".admin_url()."admin.php?page=add_edit_testimonials.php&post={$testimonial->ID}&p={$page}&action=edit\" title=\"Edit this testimonial\">Edit</a> | </span>
-                    <span class='trash'><a class='submitdelete' title='Delete this testimonial' href='".admin_url()."admin.php?page=posts_listing.php&post_status={$status}&post={$testimonial->ID}&d=yes&p={$page}'>Delete</a></span></div></td>\n".
+                    <span class='trash'><a class='submitdelete' title='Delete this testimonial' href='".admin_url()."admin.php?page=testimonials_listing.php&post={$testimonial->ID}&d=yes&p={$page}'>Delete</a></span></div></td>\n".
                    "\t<td>".str_replace("\n", '<br/>', $testimonial->testimonials)."</td>\n".
                    "</tr>";
               $odd = !$odd;

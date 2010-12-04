@@ -33,8 +33,10 @@
 	$table_name = $wpdb->prefix . "testimonials";
 	$testimonial = $wpdb->get_row("SELECT * FROM $table_name WHERE ID='{$id}'", OBJECT);
 	if($_POST['isSave'] == '1'){
-		$query= "INSERT INTO {$table_name} SET              
+		$query= "INSERT INTO {$table_name} SET 
+		    	`image` = '{$_POST['image']}',
 				`author` = '{$wpdb->escape(strip_tags(stripslashes($_POST['author'])))}',
+				`email` = '{$wpdb->escape(strip_tags(stripslashes($_POST['email'])))}',
 				`company` = '{$wpdb->escape(strip_tags(stripslashes($_POST['company'])))}',
 				`website` = '{$wpdb->escape(strip_tags(stripslashes($_POST['website'])))}',
 				`testimonials` = '{$wpdb->escape(stripslashes($_POST['testimonials']))}',
@@ -58,14 +60,25 @@
     <div class="media-item media-blank">
       <table class="describe"><tbody>
         <tr>
-          <th class="label" scope="row"><span class="alignleft"><label for="ads_title">Author:</label></span></th>
-          <td class="field"><input type="text" name="author" id="author" class="ads_txt" value="<?php echo $testimonial->author; ?>"/></td>
+          <th class="label" scope="row"><span class="alignleft"><label for="image">Image:</label></span></th>
+          <td class="field">
+            <input type="radio" name="image" id="image" class="ads_txt" value="avatar" <?php if($testimonial->image == "avatar") echo "checked";?>> Avatar 
+            <input type="radio" name="image" id="image" class="ads_txt" value="no_image" <?php if($testimonial->image == "no_image") echo "checked";?>> No Image
+          </td>
         </tr>
-		<tr>
-          <th class="label"><span class="alignleft"><label for="ads_email">Company:</label></span></th>
+        <tr>
+          <th class="label" scope="row"><span class="alignleft"><label for="ads_title">Author:</label></span></th>
+          <td class="field"><input type="text" name="author" id="author1" class="ads_txt" value="<?php echo $testimonial->author; ?>"/></td>
+        </tr>
+		    <tr>
+          <th class="label"><span class="alignleft"><label for="email">Email:</label></span></th>
+          <td><input type="text" name="email" id="email" class="ads_txt" value="<?php echo stripslashes($testimonial->email); ?>"/></td>
+        </tr>
+        <tr>
+          <th class="label"><span class="alignleft"><label for="company">Company:</label></span></th>
           <td><input type="text" name="company" id="company" class="ads_txt" value="<?php echo stripslashes($testimonial->company); ?>"/></td>
         </tr>
-    	<tr>
+    	 <tr>
           <th class="label"><span class="alignleft"><label for="ads_link">Website:</label></span></th>
           <td><input type="text" name="website" id="website" class="ads_txt" value="<?php echo $testimonial->website; ?>"/></td>
         </tr>

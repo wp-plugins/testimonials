@@ -27,8 +27,8 @@
   
    $options = get_option('testimonials_tpl');
   if(!is_array($options)){
-    $options['page_tpl'] = "<div>%image%<div id='testimonial'><div class='cnt right'><span id='author'>%author% | %company%</span>%testimonials%</div></div></div><br/>";
-  	$options['shortcode_tpl'] = "<div>%image%<div id='testimonial'><div class='cnt right'><span id='author'>%author% | %company%</span>%testimonials%</div></div></div><br/>";
+    $options['page_tpl'] = "<div>%image%<div id='testimonial'><div class='left'></div><div class='cnt right'><span id='author'>%author% | %company%</span>%testimonials%</div></div></div><br/>";
+  	$options['shortcode_tpl'] = "<div>%image%<div id='testimonial'><div class='left'></div><div class='cnt right'><span id='author'>%author% | %company%</span>%testimonials%</div></div></div><br/>";
     $options['widget_tpl'] = "<div class='testimonial'><span class='right' id='author'>%image% %author% %website%</span><span>%testimonials%</span></div>";
     update_option('testimonials_tpl', $options);
   }

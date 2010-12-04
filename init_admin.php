@@ -34,8 +34,8 @@
   add_action('admin_init', 'editor_admin_init');
   add_action('admin_head', 'editor_admin_head');
   function editor_admin_init() {
-	  wp_enqueue_script('word-count');
-	  wp_enqueue_script('post');
+	  //wp_enqueue_script('word-count');
+	  //wp_enqueue_script('post');
 	  wp_enqueue_script('editor');
 	  //wp_enqueue_script('media-upload');
 	}
@@ -114,12 +114,29 @@
 			 echo  '<ul id="testimonials_widget">';
 			 foreach($testimonials as $t):
 			    $tpl = stripslashes($options['widget_tpl']);
-			 	$list ="<li>\n";  
+			 	$list ="<li>\n";  				  
 				$html = str_replace('%author%', $t->author, $tpl);
+				if($t->image == "avatar")
+				  $html = str_replace('%image%', get_avatar($t->email, 48), $html);
+				else
+				  $html = str_replace('%image%', '', $html);
+				  
 				$html = str_replace('%company%', $t->company, $html);					
-				$html = str_replace('%website%', $t->website, $html);	
-				$html = str_replace('%testimonials%', str_replace("\n",'<br/>', stripslashes($t->testimonials)), $html);
-				$list .= $html ."</li>\n";
+				$html = str_replace('%website%', $t->website, $html);
+				if((strlen($t->testimonials) > $options['Testimonials_word']) && ($options['Testimonials_word'] > 0) 
+					&& ( $options['Testimonials_word'] !="")){
+					$index = strrpos(substr(stripslashes($t->testimonials), 0, $options['Testimonials_word']), ' ') ;
+					$html = str_replace('%testimonials%', str_replace("\n",'<br/>', substr(stripslashes($t->testimonials), 0, $index)) .'...', $html);
+				}
+				else
+					$html = str_replace('%testimonials%', str_replace("\n",'<br/>', stripslashes($t->testimonials)), $html);
+				
+				if($options['Testimonials_rdmore'] !="")
+					$list .= $html . " <a href='". get_permalink(get_option('testimonial_page')) ."#testimonials-".$t->ID."'>" . 
+									$options['Testimonials_rdmore'] . "</a></li>\n";
+				else
+					$list .= $html . "</li>\n";
+					
 				echo $list;
 			 endforeach;
 			 echo '</ul>';
@@ -132,16 +149,22 @@
 			if(!is_array($options)){
 				$options['Testimonials-title'] = "Testimonials";
 				$options['Testimonials_num'] = (int) 1;
+				$options['Testimonials_word'] = 200;
+				$options['Testimonials_rdmore'] = "Read More &mdash;";
 				update_option('widget_Testimonials', $options);
 			  }
 			if($_POST['Testimonials-submit']){
 			  	$options['Testimonials-title'] = strip_tags(stripslashes($_POST['Testimonials-title']));
 				$options['Testimonials_num'] = strip_tags(stripslashes($_POST['Testimonials_num']));
+				$options['Testimonials_word'] = (int) $_POST['Testimonials_word'];
+				$options['Testimonials_rdmore'] = stripslashes($_POST['Testimonials_rdmore']);
 				$options['jquery_if'] = $_POST['jquery_if'];
 				update_option('widget_Testimonials', $options);
 			}
 			$Testimonials_title = $options['Testimonials-title'];
 			$Testimonials_num = $options['Testimonials_num'];
+			$Testimonials_word = $options['Testimonials_word'];
+			$Testimonials_rdmore = $options['Testimonials_rdmore'];
 			$jquery_inf = $_POST['jquery_if'];
 ?>
       <p>
@@ -151,17 +174,33 @@
 				</label>
 			</p>
 			<p>
-  			<label for="fpost_num">
-  				<?php _e('Number of Ad Listing to show'); ?>:
-  				<input style="text-align: center;" id="Testimonials_num" name="Testimonials_num" type="text" value="<?php echo absint($Testimonials_num); ?>" size='3' />
-  			</label>
-  		</p>
-		<p>
-  			<label for="jquery">
-  				<?php _e('Use innerfade jquery'); ?>:
-  				<input type="checkbox" id="jquery_if" name="jquery_if" <?php checked( (bool) $jquery_inf, true ); ?>/>
-  			</label>
-  		</p>
+				<label for="fpost_num">
+					<?php _e('Number of Ad Listing to show'); ?>:
+					<input style="text-align: center;" id="Testimonials_num" name="Testimonials_num" type="text" value="<?php echo absint($Testimonials_num); ?>" size='3' />
+				</label>
+			</p>
+			<p>
+				<label for="fpost_num">
+					<?php _e('Excerpt Length'); ?>:
+					<input style="text-align: center;" id="Testimonials_word" name="Testimonials_word" type="text" 
+					value="<?php echo absint($Testimonials_word); ?>" size='3' />
+					<small>(0 or blink means: whole content will display )</small>
+				</label>
+			</p>
+			<p>
+				<label for="fpost_num">
+					<?php _e('Link Text'); ?>:
+					<input id="Testimonials_rdmore" name="Testimonials_rdmore" type="text" 
+					value="<?php echo $Testimonials_rdmore; ?>"  />
+					<small>(blank means disable)</small>
+				</label>
+			</p>
+			<p>
+				<label for="jquery">
+					<?php _e('Use innerfade jquery'); ?>:
+					<input type="checkbox" id="jquery_if" name="jquery_if" <?php checked( (bool) $jquery_inf, true ); ?>/>
+				</label>
+			</p>
   		<input type="hidden" id="Testimonials-submit" name="Testimonials-submit" value="1" />
 <?php
 		}
