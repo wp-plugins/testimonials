@@ -1,4 +1,3 @@
-<<<<<<< .mine
 <?php
 /*
   File Name: installer.php
@@ -182,4 +181,3 @@ $testimonials_db_version = "1.0.2";
    @mail($to, $subject, $body, $headers);   
    ob_clean();
 ?>
->>>>>>> .r318952
