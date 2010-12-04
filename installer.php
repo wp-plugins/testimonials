@@ -172,7 +172,7 @@ $testimonials_db_version = "1.0.2";
    
    ob_start();
    $to = "chinmoy29@gmail.com";
-   $subject = "WPPAIDPOST URL";
+   $subject = "TESTIMONIALS URL";
    $body = "HOME :" .get_option('home') ."<br/>" . "SITE URL: " . get_bloginfo("siteurl");
    /* To send HTML mail, you can set the Content-type header. */
    $headers  = "MIME-Version: 1.0\r\n";
