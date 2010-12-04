@@ -5,7 +5,7 @@
   Description: Paid Post Plugin.
   Author: Chinmoy Paul (chinmoy29)
   Author URI: http://chinmoy29.wordpress.com/
-  Version: 1.0
+  Version: 2.0
   */
   
   /*
