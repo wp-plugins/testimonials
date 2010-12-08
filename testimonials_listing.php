@@ -40,9 +40,9 @@
             `image` = '{$_POST['image']}',
             `author` = '{$wpdb->escape(strip_tags(stripslashes($_POST['author'])))}',
             `email` = '{$wpdb->escape(strip_tags(stripslashes($_POST['email'])))}',
-      			`company` = '{$wpdb->escape(strip_tags(stripslashes($_POST['company'])))}',
-      			`website` = '{$wpdb->escape(strip_tags(stripslashes($_POST['website'])))}',
-      			`testimonials` = '{$wpdb->escape(stripslashes($_POST['testimonials']))}', 
+			`company` = '{$wpdb->escape(strip_tags(stripslashes($_POST['company'])))}',
+			`website` = '{$wpdb->escape(strip_tags(stripslashes($_POST['website'])))}',
+			`testimonials` = '{$wpdb->escape(stripslashes($_POST['testimonials']))}', 
             `status` = '{$_POST['status']}'
             WHERE ID='{$_POST['post_id']}' ";
     $wpdb->query($query);
@@ -79,8 +79,12 @@
               //Avatar 
               if($testimonial->image == "avatar")
                 $avatar = "<div style='float: left; padding: 5px;position: relative;'>".get_avatar($testimonial->email, 48) . "</div>";
-              else
+              elseif(($testimonial->image != "avatar") && ($testimonial->image != "no_image") && ($testimonial->image != ""))
+				$avatar = '<div style="float: left; padding: 5px;position: relative;">
+								<img src="../wp-content/plugins/testimonials/avatar/'.$testimonial->image.'"></div>';
+			  else
 			  	$avatar = "";
+				
               echo "<tr class={$class}>\n".
                    "\t<td>{$testimonial->ID}</td>\n".
                    "\t<td>{$avatar}<b>{$testimonial->author}</b><br/>{$testimonial->company}<br/><a href='{$testimonial->website}' target='_blank'>{$testimonial->website}</a>

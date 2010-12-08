@@ -1,10 +1,10 @@
 === Testimonials ===
 Contributors: Chinmoy Paul, chinmoy29
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwebdeveloper%40gmail%2ecom&item_name=Testimonials%20Plugin&item_number=Support%20Open%20Source&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwebdeveloper29%40gmail%2ecom&item_name=Testimonials%20Plugin&item_number=Support%20Open%20Source&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: post,plugin, testimonials, client testimonails, widget
 Requires at least: 2.0
 Tested up to: 3.0.1
-Stable tag: 2.0
+Stable tag: 2.1
 
 Automatically monitizes your Wordpress blog .
 
@@ -13,9 +13,10 @@ Testimonials is a WordPress plugin that allows you to manage and display testimo
 
 **[Download now!](http://downloads.wordpress.org/plugin/testimonials.zip)**
 
-[Support](http://chinmoy29.wordpress.com/2010/11/15/testimonials-plugin-for-wordpress-site/) |
-[Version History](http://chinmoy29.wordpress.com/2010/11/15/testimonials-plugin-for-wordpress-site/) |
-[FAQ](http://chinmoy29.wordpress.com/2010/11/15/testimonials-plugin-for-wordpress-site/)
+[Support](http://www.marketingadsandseo.com/support/) |
+**[Details](http://www.marketingadsandseo.com/2010/12/testimonials-p…wordpress-site/) ** |
+[FAQ](http://www.marketingadsandseo.com/support/)| 
+[Version History] (http://wordpress.org/extend/plugins/testimonials/changelog/)
 
 
 Some features:
@@ -32,8 +33,7 @@ Some features:
 
 * Management area to add/edit/delete new or existing testimonials.
 
-* Also put the testimonals in other place (without sidebar) of your site by calling a function.
-
+* see the change log option for new version 2.1
 
 == Installation ==
 
@@ -48,26 +48,27 @@ If you have to upgrade manually simply repeat the installation steps.
 
 == Frequently Asked Questions ==
 
-**[Support](http://chinmoy29.wordpress.com/2010/11/15/testimonials-plugin-for-wordpress-site/)**
+**[Support](http://www.marketingadsandseo.com/support/)**
 
 == Screenshots ==
 
-1. goto http://chinmoy29.wordpress.com/2010/11/15/testimonials-plugin-for-wordpress-site/
+1. goto http://www.marketingadsandseo.com/2010/12/testimonials-p…wordpress-site/
 
 == Changelog ==
-
 = 1.0 =
-* This is a first version
+* Simple Plugin
 
 = 2.0 =
-* 2nd version
+* Some modified 
 
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.
-
-= 2.0 =
-This version provide avatar and some features for widget. Upgrade immediately.
+= 2.1 =
+    * Auto generated testimonials page with shortcode.
+    * You can put a particular testimonials within a post/page using shortcode. This shortcode have some attributes.
+      Here is the example.
+      a) Excerpt Testimonial — [testimonials_in_post excerpt_length=200 id=2,21 readmore="Read More &rarr;"]
+      b) Full Length Testimonial — [testimonials_in_post id=14]
+    * Sidebar Widget: There have also some option choosing feature: (a) Number of Testimonial (b) Excerpt Content Length (c) Custom Read More Link (d)JQuery feature settings option (Scoll Up) .
+    * Manage Testimonial Option:  from there you can handle add/edit/delete functionality .
+    * General Settings Option : Here you will get three features: 1) Color picker tool for change the text color
 
 

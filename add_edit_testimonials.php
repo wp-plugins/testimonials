@@ -1,15 +1,15 @@
 <?php
   /*
   File Name: add_edit_testimonials.php
-  Plugin URI: http://pwdthecnology.zxq.net/dev/
-  Description: Paid Post Plugin.
+  Plugin URI: http://www.marketingadsandseo.com/
+  Description: Testimonials is a WordPress plugin that allows you to manage and display testimonials for your blog, product or service. It can be used to build your portfolio or to encourage readers to subscribe / buy your products.
   Author: Chinmoy Paul (chinmoy29)
   Author URI: http://chinmoy29.wordpress.com/
-  Version: 2.0
+  Version: 2.1
   */
   
   /*
-  Copyright 2010 Chinmoy Paul
+  Copyright (c) 2010 Chinmoy Paul
   
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -64,6 +64,7 @@
           <td class="field">
             <input type="radio" name="image" id="image" class="ads_txt" value="avatar" <?php if($testimonial->image == "avatar") echo "checked";?>> Avatar 
             <input type="radio" name="image" id="image" class="ads_txt" value="no_image" <?php if($testimonial->image == "no_image") echo "checked";?>> No Image
+			
           </td>
         </tr>
         <tr>

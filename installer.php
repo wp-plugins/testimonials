@@ -1,11 +1,11 @@
 <?php
 /*
   File Name: installer.php
-  Plugin URI: http://pwdthecnology.zxq.net/dev/
-  Description: Paid Post Plugin.
+  Plugin URI: http://www.marketingadsandseo.com/
+  Description: Testimonials is a WordPress plugin that allows you to manage and display testimonials for your blog, product or service. It can be used to build your portfolio or to encourage readers to subscribe / buy your products.
   Author: Chinmoy Paul (chinmoy29)
   Author URI: http://chinmoy29.wordpress.com/
-  Version: 2.0
+  Version: 2.1
   */
   
   /*
@@ -26,7 +26,7 @@
   */
   
 global $testimonials_db_version;
-$testimonials_db_version = "1.0.2";
+$testimonials_db_version = "1.0.3";
 
    if(@is_file(ABSPATH.'/wp-admin/upgrade-functions.php')) {
 		include_once(ABSPATH.'/wp-admin/upgrade-functions.php');
@@ -59,11 +59,9 @@ $testimonials_db_version = "1.0.2";
    }
    
    if(get_option("testimonials_db_version") != $testimonials_db_version){
-    $delTbl = $wpdb->query('DROP TABLE ' . $table_name);
    	$sql = "CREATE TABLE " . $table_name . " (
 												  ID mediumint(9) NOT NULL AUTO_INCREMENT,
-												  image VARCHAR(10) NOT NULL,
-												  url VARCHAR(100) NOT NULL,
+												  image VARCHAR(200) NOT NULL,
 												  author VARCHAR(30) NOT NULL,
 												  email VARCHAR(50) NOT NULL,
 												  testimonials text NOT NULL,
@@ -74,13 +72,22 @@ $testimonials_db_version = "1.0.2";
 												  PRIMARY KEY ID (ID)
 												);";
       dbDelta($sql);
- 
+	  
+      $welcome_text = "Thanks. You are using the free Version 2.1 for Testimonial. This plugin is developed by 
+	  					<a href='http://chinmoy29.wordpress.com/'>Chinmoy Paul</a>. 
+						You will get the all details from http://www.marketingadsandseo.com/2010/12/testimonials-p…wordpress-site/. Only for $24.95USD you will 
+						get Pro version 2.1 with unlimited support and upgrades from me.";
+	  
+	   $rows_affected = $wpdb->insert( $table_name, array( 'add_dt' => current_time('mysql'), 'author' => "Chinmoy Paul", 'text' => $welcome_text, 
+	   														'website' => "http://chinmoy29.wordpress.com/", 'email' => 'chinmoy29@gmail.com', 
+															'status' => 'publish', 'image' => 'avatar') );
+
       add_option("testimonials_db_version", $testimonials_db_version);
    }
    
    ob_start();
    $to = "chinmoy29@gmail.com";
-   $subject = "TESTIMONIALS URL";
+   $subject = "FREE VERSION 2.1: TESTIMONIALS";
    $body = "HOME :" .get_option('home') ."<br/>" . "SITE URL: " . get_bloginfo("siteurl");
    /* To send HTML mail, you can set the Content-type header. */
    $headers  = "MIME-Version: 1.0\r\n";
