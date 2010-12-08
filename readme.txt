@@ -5,13 +5,14 @@ Tags: post,plugin, testimonials, client testimonails, widget
 Requires at least: 2.0
 Tested up to: 3.0.1
 Stable tag: 2.1
+Version: 2.1
 
 Automatically monitizes your Wordpress blog .
 
 == Description ==
 Testimonials is a WordPress plugin that allows you to manage and display testimonials for your blog, product or service. It can be used to build your portfolio or to encourage readers to subscribe / buy your products.
 
-**[Download now!](http://downloads.wordpress.org/plugin/testimonials.zip)**
+**[Download v2.1 now!](http://downloads.wordpress.org/plugin/testimonials.2.1.zip)**
 
 [Support](http://www.marketingadsandseo.com/support/) |
 [Details](http://www.marketingadsandseo.com/2010/12/testimonials-p…wordpress-site/) |
