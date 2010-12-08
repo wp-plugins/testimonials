@@ -59,9 +59,12 @@
 	}
 	
 	function custom_css_query(){
-		foreach(get_option('testimonials_custom_dsgn') as $key => $value){
-			$custom_css_query .= "&$key=$value";
-		}
+		$cd = get_option('testimonials_custom_dsgn');
+		if(is_array($cd)){
+			foreach($cd as $key => $value){
+				$custom_css_query .= "&$key=$value";
+			}
+		}	
 		
 		return substr($custom_css_query, 1);
 	}
