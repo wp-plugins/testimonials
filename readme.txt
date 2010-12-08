@@ -14,9 +14,9 @@ Testimonials is a WordPress plugin that allows you to manage and display testimo
 **[Download now!](http://downloads.wordpress.org/plugin/testimonials.zip)**
 
 [Support](http://www.marketingadsandseo.com/support/) |
-**[Details](http://www.marketingadsandseo.com/2010/12/testimonials-p…wordpress-site/) ** |
+[Details](http://www.marketingadsandseo.com/2010/12/testimonials-p…wordpress-site/) |
 [FAQ](http://www.marketingadsandseo.com/support/)| 
-[Version History] (http://wordpress.org/extend/plugins/testimonials/changelog/)
+[Version History](http://wordpress.org/extend/plugins/testimonials/changelog/)
 
 
 Some features:
