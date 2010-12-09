@@ -5,7 +5,6 @@ Tags: post,plugin, testimonials, client testimonails, widget
 Requires at least: 2.0
 Tested up to: 3.0.1
 Stable tag: 2.1
-Version: 2.1
 
 Automatically monitizes your Wordpress blog .
 
@@ -15,7 +14,7 @@ Testimonials is a WordPress plugin that allows you to manage and display testimo
 **[Download v2.1 now!](http://downloads.wordpress.org/plugin/testimonials.2.1.zip)**
 
 [Support](http://www.marketingadsandseo.com/support/) |
-[Details](http://www.marketingadsandseo.com/2010/12/testimonials-p…wordpress-site/) |
+[Details](http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/) |
 [FAQ](http://www.marketingadsandseo.com/support/)| 
 [Version History](http://wordpress.org/extend/plugins/testimonials/changelog/)
 
@@ -53,7 +52,7 @@ If you have to upgrade manually simply repeat the installation steps.
 
 == Screenshots ==
 
-1. goto http://www.marketingadsandseo.com/2010/12/testimonials-p…wordpress-site/
+1. goto http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/
 
 == Changelog ==
 = 1.0 =
@@ -66,10 +65,10 @@ If you have to upgrade manually simply repeat the installation steps.
     * Auto generated testimonials page with shortcode.
     * You can put a particular testimonials within a post/page using shortcode. This shortcode have some attributes.
       Here is the example.
-      a) Excerpt Testimonial — [testimonials_in_post excerpt_length=200 id=2,21 readmore="Read More &rarr;"]
-      b) Full Length Testimonial — [testimonials_in_post id=14]
+      a) Excerpt Testimonial-[testimonials_in_post excerpt_length=200 id=2,21 readmore="Read More &rarr;"]
+      b) Full Length Testimonial-[testimonials_in_post id=14]
     * Sidebar Widget: There have also some option choosing feature: (a) Number of Testimonial (b) Excerpt Content Length (c) Custom Read More Link (d)JQuery feature settings option (Scoll Up) .
-    * Manage Testimonial Option:  from there you can handle add/edit/delete functionality .
+    * Manage Testimonial Option: from there you can handle add/edit/delete functionality .
     * General Settings Option : Here you will get three features: 1) Color picker tool for change the text color
 
 
