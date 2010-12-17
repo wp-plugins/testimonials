@@ -5,7 +5,7 @@
   Description: Testimonials is a WordPress plugin that allows you to manage and display testimonials for your blog, product or service. It can be used to build your portfolio or to encourage readers to subscribe / buy your products.
   Author: Chinmoy Paul (chinmoy29)
   Author URI: http://chinmoy29.wordpress.com/
-  Version: 2.1
+  Version: 2.1.1
   */
   
   /*
@@ -28,6 +28,10 @@
   include "init_admin.php";
   function testimonials_install() {
 	   require_once(dirname(__FILE__).'/installer.php');
+	  $options['page_tpl'] = "<div><span class='testimonials-avatar'>%image%</span><div id='testimonial'><div class='cnt'><span id='tAuthor'>%author%</span> | <span id='tCompany'>%company%</span><div class='tTestimonial'>%testimonials%</div></div></div></div><br/>";
+  	$options['shortcode_tpl'] = "<div><span class='testimonials-avatar'>%image%</span><div id='testimonial'><div class='cnt'><span id='tAuthor'>%author%</span> | <span id='tCompany'>%company%</span><div class='tTestimonial'>%testimonials%</div></div></div></div><br/>";
+    $options['widget_tpl'] = "<div id='testimonails-widget'><span class='wAvatar'>%image%</span><p class='wTesimonial'>%testimonials%</p> &mdash; <span class='wAuthor'>%author%</span> | <span class='wCompany'>%company%</span></div>";
+    update_option('testimonials_tpl', $options);
 	}
 	register_activation_hook(__FILE__, 'testimonials_install');
   
