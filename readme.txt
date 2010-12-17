@@ -5,6 +5,7 @@ Tags: post,plugin, testimonials, client testimonails, widget
 Requires at least: 2.0
 Tested up to: 3.0.1
 Stable tag: 2.1
+Version: 2.1.1
 
 Automatically monitizes your Wordpress blog .
 
@@ -52,23 +53,18 @@ If you have to upgrade manually simply repeat the installation steps.
 
 == Screenshots ==
 
-1. goto http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/
+1. goto http://www.marketingadsandseo.com/2010/12/testimonials-p…wordpress-site/
 
 == Changelog ==
-= 1.0 =
-* Simple Plugin
-
-= 2.0 =
-* Some modified 
-
 = 2.1 =
     * Auto generated testimonials page with shortcode.
     * You can put a particular testimonials within a post/page using shortcode. This shortcode have some attributes.
       Here is the example.
-      a) Excerpt Testimonial-[testimonials_in_post excerpt_length=200 id=2,21 readmore="Read More &rarr;"]
-      b) Full Length Testimonial-[testimonials_in_post id=14]
+      a) Excerpt Testimonial — [testimonials_in_post excerpt_length=200 id=2,21 readmore="Read More &rarr;"]
+      b) Full Length Testimonial — [testimonials_in_post id=14]
     * Sidebar Widget: There have also some option choosing feature: (a) Number of Testimonial (b) Excerpt Content Length (c) Custom Read More Link (d)JQuery feature settings option (Scoll Up) .
-    * Manage Testimonial Option: from there you can handle add/edit/delete functionality .
+    * Manage Testimonial Option:  from there you can handle add/edit/delete functionality .
     * General Settings Option : Here you will get three features: 1) Color picker tool for change the text color
 
-
+= 2.1.1 =
+After activation the plugin nothing is coming at front end. Fixed this bugs. 
