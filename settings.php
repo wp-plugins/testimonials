@@ -24,14 +24,14 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
-  
    $options = get_option('testimonials_tpl');
    $custOption = get_option("custom_css");
    $dsgnOptions = get_option("testimonials_custom_dsgn");
+   
   if(!is_array($options)){
     $options['page_tpl'] = "<div><span class='testimonials-avatar'>%image%</span><div id='testimonial'><div class='cnt'><span id='tAuthor'>%author%</span> | <span id='tCompany'>%company%</span><div class='tTestimonial'>%testimonials%</div></div></div></div><br/>";
   	$options['shortcode_tpl'] = "<div><span class='testimonials-avatar'>%image%</span><div id='testimonial'><div class='cnt'><span id='tAuthor'>%author%</span> | <span id='tCompany'>%company%</span><div class='tTestimonial'>%testimonials%</div></div></div></div><br/>";
-    $options['widget_tpl'] = "<div id='testimonails-widget'><span class='wAvatar'>%image%</span><p class='wTesimonial'>%testimonials%</p> — <span class='wAuthor'>%author%</span> | <span class='wCompany'>%company%</span></div>";
+    $options['widget_tpl'] = "<div id='testimonails-widget'><span class='wAvatar'>%image%</span><p class='wTesimonial'>%testimonials%</p> &mdash; <span class='wAuthor'>%author%</span> | <span class='wCompany'>%company%</span></div>";
     update_option('testimonials_tpl', $options);
   }
   
@@ -55,15 +55,7 @@
 	update_option('testimonials_custom_dsgn', $dsgnOptions);
   }
   
-  if($_POST['isSave'] == '1'){
-    $option['shortcode_tpl'] = stripslashes($_POST['shortcode_tpl']);
-    $option['widget_tpl'] = stripslashes($_POST['widget_tpl']);
-	$option['page_tpl'] = stripslashes($_POST['page_tpl']);
-	$custOption['custom_css'] = stripslashes($_POST['custom_css']);
-    update_option('testimonials_tpl', $option);
-    $options = get_option('testimonials_tpl');
-	update_option('custom_css', $custOption);
-	
+  if($_POST['isSave'] == '1'){	
 	$dsgnOptions['author_txt_clr'] = $_POST['author_txt_clr'] ;
 	$dsgnOptions['wauthor_txt_clr'] = $_POST['wauthor_txt_clr'];
 	$dsgnOptions['ipauthor_txt_clr'] = $_POST['ipauthor_txt_clr'];
