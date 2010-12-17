@@ -41,19 +41,27 @@ $testimonials_db_version = "1.0.3";
    if($wpdb->get_var("show tables like '$table_name'") != $table_name) {
       
       $sql = "CREATE TABLE " . $table_name . " (
-												  ID mediumint(9) NOT NULL AUTO_INCREMENT,
-												  image VARCHAR(10) NOT NULL,
-												  author VARCHAR(30) NOT NULL,
-												  email VARCHAR(50) NOT NULL,
-												  testimonials text NOT NULL,
-												  website VARCHAR(200) NOT NULL,												  
-												  company VARCHAR(150) NOT NULL,
-                      							  add_dt datetime NOT NULL,
-												  status enum('publish','draft') NOT NULL,
-												  PRIMARY KEY ID (ID)
-												);";
+                      												  ID mediumint(9) NOT NULL AUTO_INCREMENT,
+                      												  image VARCHAR(10) NOT NULL,
+                      												  author VARCHAR(30) NOT NULL,
+                      												  email VARCHAR(50) NOT NULL,
+                      												  testimonials text NOT NULL,
+                      												  website VARCHAR(200) NOT NULL,												  
+                      												  company VARCHAR(150) NOT NULL,
+                                            		add_dt datetime NOT NULL,
+                      												  status enum('publish','draft') NOT NULL,
+                      												  PRIMARY KEY ID (ID)
+                      												);";
       dbDelta($sql);
- 
+      $welcome_text = "Thanks. You are using the free Version 2.1 for Testimonial. This plugin is developed by 
+	  					<a href='http://chinmoy29.wordpress.com/'>Chinmoy Paul</a>. 
+						You will get the all details from http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/. Only for $24.95USD you will 
+						get Pro version 2.1 with unlimited support and upgrades from me.";
+						
+      $rows_affected = $wpdb->insert( $table_name, array( 'add_dt' => current_time('mysql'), 'author' => "Chinmoy Paul", 'text' => $welcome_text, 
+	   														'website' => "http://chinmoy29.wordpress.com/", 'email' => 'chinmoy29@gmail.com', 
+															'status' => 'publish', 'image' => 'avatar') );
+															
       add_option("testimonials_db_version", $testimonials_db_version);
 
    }
