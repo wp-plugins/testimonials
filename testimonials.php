@@ -5,7 +5,7 @@
   Description: Testimonials is a WordPress plugin that allows you to manage and display testimonials for your blog, product or service. It can be used to build your portfolio or to encourage readers to subscribe / buy your products.
   Author: Chinmoy Paul (chinmoy29)
   Author URI: http://chinmoy29.wordpress.com/
-  Version: 2.1.1
+  Version: 3.0
   */
   
   /*
