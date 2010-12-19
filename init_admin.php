@@ -122,6 +122,10 @@
 		  
 		}
 		
+		$options['page_tpl'] = "<div><span class='testimonials-avatar'>%image%</span><div id='testimonial'><div class='cnt'><span id='tAuthor'>%author%</span><span id='tCompany'> | %company%</span><div class='tTestimonial'>%testimonials%</div></div></div></div><br/>";
+  	$options['shortcode_tpl'] = "<div><span class='testimonials-avatar'>%image%</span><div id='testimonial'><div class='cnt'><span id='tAuthor'>%author%</span><span id='tCompany'> | %company%</span><div class='tTestimonial'>%testimonials%</div></div></div></div><br/>";
+    $options['widget_tpl'] = "<div id='testimonails-widget'><span class='wAvatar'>%image%</span><p class='wTesimonial'>%testimonials%</p> &mdash; <span class='wAuthor'>%author%</span><span class='wCompany'> | %company%</span></div>";
+    update_option('testimonials_tpl', $options);
 	}
 	
 ?>
