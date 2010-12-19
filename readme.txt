@@ -4,8 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwe
 Tags: post,plugin, testimonials, client testimonails, widget
 Requires at least: 2.0
 Tested up to: 3.0.1
-Stable tag: 2.1.1
-Version: 2.1.1
+Stable tag: 3.0
 
 Automatically monitizes your Wordpress blog .
 
