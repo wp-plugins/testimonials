@@ -24,7 +24,7 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
-  
+  	
 global $testimonials_db_version;
 $testimonials_db_version = "1.0.3";
 
@@ -53,6 +53,15 @@ $testimonials_db_version = "1.0.3";
                       												  PRIMARY KEY ID (ID)
                       												);";
       dbDelta($sql);
+<<<<<<< .mine
+      $welcome_text = "Thanks. You are using the free Version 2.1 for Testimonial. This plugin is developed by <a href='http://chinmoy29.wordpress.com/'>Chinmoy Paul</a>. 
+						You will get the all details from http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/. Only for $24.95USD you will get Pro version 2.1 with unlimited support and upgrades from me.";
+						
+      $rows_affected = $wpdb->insert( $table_name, array( 'add_dt' => current_time('mysql'), 'author' => "Chinmoy Paul", 'testimonials' => stripslashes($welcome_text), 
+	   														'website' => "http://chinmoy29.wordpress.com/", 'email' => 'chinmoy29@gmail.com', 
+															'status' => 'publish', 'image' => 'avatar') );
+															
+=======
       $welcome_text = "Thanks. You are using the free Version 2.1 for Testimonial. This plugin is developed by <a href='http://chinmoy29.wordpress.com/'>Chinmoy Paul</a>. 
 						You will get the all details from http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/. Only for $24.95USD you will get Pro version 2.1 with unlimited support and upgrades from me.";
 						
@@ -60,6 +69,7 @@ $testimonials_db_version = "1.0.3";
 	   														'website' => "http://chinmoy29.wordpress.com/", 'email' => 'chinmoy29@gmail.com', 
 															'status' => 'publish', 'image' => 'avatar') );
 															
+>>>>>>> .r324265
       add_option("testimonials_db_version", $testimonials_db_version);
 
    }
@@ -79,10 +89,17 @@ $testimonials_db_version = "1.0.3";
 												);";
       dbDelta($sql);
 	  
+<<<<<<< .mine
+      $welcome_text = "Thanks. You are using the free Version 2.1 for Testimonial. This plugin is developed by <a href='http://chinmoy29.wordpress.com/'>Chinmoy Paul</a>. 
+						You will get the all details from http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/. Only for $24.95USD you will get Pro version 2.1 with unlimited support and upgrades from me.";
+						
+      $rows_affected = $wpdb->insert( $table_name, array( 'add_dt' => current_time('mysql'), 'author' => "Chinmoy Paul", 'testimonials' => stripslashes($welcome_text), 
+=======
       $welcome_text = "Thanks. You are using the free Version 2.1 for Testimonial. This plugin is developed by <a href='http://chinmoy29.wordpress.com/'>Chinmoy Paul</a>. 
 						You will get the all details from http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/. Only for $24.95USD you will get Pro version 2.1 with unlimited support and upgrades from me.";
 						
       $rows_affected = $wpdb->insert( $table_name, array( 'add_dt' => current_time('mysql'), 'author' => "Chinmoy Paul", 'testimonials' => stripslahes($welcome_text), 
+>>>>>>> .r324265
 	   														'website' => "http://chinmoy29.wordpress.com/", 'email' => 'chinmoy29@gmail.com', 
 															'status' => 'publish', 'image' => 'avatar') );
 
