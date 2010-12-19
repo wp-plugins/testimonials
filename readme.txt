@@ -67,3 +67,6 @@ If you have to upgrade manually simply repeat the installation steps.
 
 = 2.1.1 =
 After activation the plugin nothing is coming at front end. Fixed this bugs. 
+
+= 3.0 =
+Fixed the fatal error. If have any problem please send a mail this address chinmoy29@gmail.com
