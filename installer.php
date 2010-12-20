@@ -53,8 +53,9 @@ $testimonials_db_version = "1.0.3";
                       												  PRIMARY KEY ID (ID)
                       												);";
       dbDelta($sql);
-      $welcome_text = "Thanks. You are using the free Version 2.1 for Testimonial. This plugin is developed by <a href='http://chinmoy29.wordpress.com/'>Chinmoy Paul</a>. 
-						You will get the all details from http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/. Only for $24.95USD you will get Pro version 2.1 with unlimited support and upgrades from me.";
+      $welcome_text = "Thanks. You are using the free Version 2.1 for Testimonial. This plugin is developed by <a href='http://chinmoy29.wordpress.com/'>Chinmoy Paul</a>.<br/> 
+						You will get the all details from http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/. <del>Only for $24.95USD you will get Pro version 2.1 with unlimited support and upgrades from me.</del>
+            Today I am giving the <b>CHRISTMAS OFFER</b>. Now Testimonials Pro Verions 2.1 is available at <b>$15USD</b>(<del> $24.95USD</del>) for unlimited support and updates.";
 						
       $rows_affected = $wpdb->insert( $table_name, array( 'add_dt' => current_time('mysql'), 'author' => "Chinmoy Paul", 'testimonials' => stripslashes($welcome_text), 
 	   														'website' => "http://chinmoy29.wordpress.com/", 'email' => 'chinmoy29@gmail.com', 
