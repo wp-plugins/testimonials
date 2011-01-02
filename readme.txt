@@ -19,6 +19,9 @@ Testimonials is a WordPress plugin that allows you to manage and display testimo
 [Version History](http://wordpress.org/extend/plugins/testimonials/changelog/)
 
 
+Free version 3.0 is not available now. Download Pro version 2.1 from [here](http://www.marketingadsandseo.com/2010/12/testimonials-plugin-for-wordpress-site/) 
+
+
 Some features:
 
 * Creates a testimonials listing page with shortcode automatically.
