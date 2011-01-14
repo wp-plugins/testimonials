@@ -87,10 +87,7 @@
 				
               echo "<tr class={$class}>\n".
                    "\t<td>{$testimonial->ID}</td>\n".
-                   "\t<td>{$avatar}<b>{$testimonial->author}</b><br/>{$testimonial->company}<br/><a href='{$testimonial->website}' target='_blank'>{$testimonial->website}</a>
-                    <div class=\"row-actions\">
-                    <span class='edit'><a href=\"".admin_url()."admin.php?page=add_edit_testimonials.php&post={$testimonial->ID}&p={$page}&action=edit\" title=\"Edit this testimonial\">Edit</a> | </span>
-                    <span class='trash'><a class='submitdelete' title='Delete this testimonial' href='".admin_url()."admin.php?page=testimonials_listing.php&post={$testimonial->ID}&d=yes&p={$page}'>Delete</a></span></div></td>\n".
+                   "\t<td>{$avatar}<b>{$testimonial->author}</b><br/>{$testimonial->company}<br/><a href='{$testimonial->website}' target='_blank'>{$testimonial->website}</a></td>\n".
                    "\t<td>".str_replace("\n", '<br/>', $testimonial->testimonials)."</td>\n".
                    "</tr>";
               $odd = !$odd;
