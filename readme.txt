@@ -3,8 +3,8 @@ Contributors: Chinmoy Paul, chinmoy29
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwebdeveloper29%40gmail%2ecom&item_name=Testimonials%20Plugin&item_number=Support%20Open%20Source&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: post,plugin, testimonials, client testimonails, widget
 Requires at least: 2.0
-Tested up to: 3.0.1
-Stable tag: 3.0
+Tested up to: 3.1.1
+Stable tag: 3.1.1 or higher
 
 Automatically monitizes your Wordpress blog .
 
