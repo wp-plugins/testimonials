@@ -1,7 +1,7 @@
 === Testimonials ===
 Contributors: Chinmoy Paul
 Author URI: http://www.pwdtechnology.com
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwebdeveloper%40gmail%2ecom&item_name=Testimonials%20Plugin&item_number=Support%20Open%20Source&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwebdeveloper29%40gmail%2ecom&item_name=Testimonials%20Plugin&item_number=Support%20Open%20Source&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: testimonials plugin, plugin, testimonials, client testimonails, widget
 Version: 3.0
 Requires at least: 3
@@ -33,7 +33,7 @@ Features:
 
 == Installation ==
 
-1. After purchasing the plugin you will get a encrypted download link. Download the zip file.
+1. Download the zip file.
 2. Login to Dashboard. Go to Plugins -> Add New -> Upload page. Browse the zip file and upload the plugin. You can also upload the plugin 
 using FTP. First Unzip the file, Connect to FTP and uplaod into /wp-content/plugins folder.
 3. Now go to plugin page and activate the plugin
