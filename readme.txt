@@ -66,3 +66,8 @@ More Details about Shortcode:
 3.0 is a major update. Please keep a backup first and then install it.
 
 == Screenshots ==
+1. List view Style One shortcode
+2. 3 columns table shortcode
+3. sliding testimonials at sidebar
+4. Output of List view
+5. 3 columns table view
