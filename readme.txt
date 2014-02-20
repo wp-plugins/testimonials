@@ -46,8 +46,7 @@ You can add the shortcode any pages/post of your site.
 More Details about Shortcode:
 
 1. List View : [testimonials view=list style="one|two|three" orderby="date|rand|ID|title" order="DESC|ASC" post_id="" thumb="small|medium|large" limit="1|5|...|10|-1"]
-2. Table View : [testimonials view=table columuns="2|3" orderby="date|rand|ID|title" order="DESC|ASC" post_id="" thumb="small|medium|large" limit="1|5|...|10|-1"]
-3. Slider : [sliding_testimonials style="one|two|three" orderby="date|rand|ID|title" order="DESC|ASC" post_id="" thumb="small|medium|large" limit="1|5|...|10|-1" autoslide="true" animation="slide|fade" slideshowSpeed=7000 animationSpeed=600]
+2. Slider : [sliding_testimonials style="one" orderby="date|rand|ID|title" order="DESC|ASC" post_id="" thumb="small|medium|large" limit="1|5|...|10|-1" autoslide="true" animation="slide|fade" slideshowSpeed=7000 animationSpeed=600]
 
 
 == Frequently Asked Questions ==

@@ -50,11 +50,7 @@ function getTestimonials($atts){
    
    $tm = "";
    $testimonials = new WP_Query($args);
-   if( $testimonials->have_posts() ):
-     if($view == 'table'){
-      include_once 'view/tp_table.php';
-     }
-     
+   if( $testimonials->have_posts() ):     
      if($view == 'list'){
       if($style == "one" ) include_once "view/list-one.php";
       if($style == "two" ) include_once "view/list-two.php";      
@@ -93,8 +89,6 @@ function slidingTestimonials($atts){
    $testimonials = new WP_Query($args);
    if( $testimonials->have_posts() ):
       if($style == "one" ) include_once "view/slider/slider-one.php";
-      if($style == "two" ) include_once "view/slider/slider-two.php";
-      if($style == "three" ) include_once "view/slider/slider-three.php";
    endif;       
    wp_reset_postdata();   
    return $tm;     
