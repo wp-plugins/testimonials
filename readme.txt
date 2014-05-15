@@ -53,6 +53,9 @@ More Details about Shortcode:
 
 == Changelog ==
 
+= 3.0.1 - 15/05/2014 =
+Fix Flexslider JQuery Error
+
 = 3.0 - 09/02/2014 =
 * Feature - Responsive
 * Feature - HTML5 Markup
