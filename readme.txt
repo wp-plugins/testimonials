@@ -3,14 +3,14 @@ Contributors: Chinmoy Paul
 Author URI: http://www.pwdtechnology.com
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwebdeveloper29%40gmail%2ecom&item_name=Testimonials%20Plugin&item_number=Support%20Open%20Source&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: testimonials plugin, plugin, testimonials, client testimonails, widget
-Version: 3.0
+Version: 3.0.1
 Requires at least: 3
 Tested up to: 3.9
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Testimonials Plugin v3.0
+Testimonials Plugin v3.0.1
 
 == Description ==
 Testimonials is a WordPress plugin that allows you to manage and display testimonials for your blog, product or service. 
@@ -60,6 +60,9 @@ More Details about Shortcode:
 * Feature - 2 layouts, 3 skins & Flexslider for sliding testimonials 
 
 == Upgrade Notice ==
+
+= 3.0.1 =
+Fix Flexslider JQuery Error
 
 = 3.0 =
 3.0 is a major update. Please keep a backup first and then install it.
