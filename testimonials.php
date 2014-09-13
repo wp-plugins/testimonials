@@ -5,7 +5,7 @@
   Description: Testimonials is a WordPress plugin that allows you to manage and display testimonials for your blog, product or service. It can be used to build your portfolio or to encourage readers to subscribe / buy your products.
   Author: Chinmoy Paul (chinmoy29)
   Author URI: http://www.pwdtechnology.com/
-  Version: 3.0
+  Version: 3.0.1
 */
   
 // Copyright (c) 2010-2104 Chinmoy Paul. All rights reserved.
@@ -46,15 +46,11 @@ function getTestimonials($atts){
   if ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
   $paged = intval( $paged );
    $args = array('post_type' => 'testimonial', 'posts_per_page' => $limit, 'orderby' => $orderby, 'order' => $order, 'paged' => $paged);
-   if( $post_id != '') { $args['p'] = $post_id;}
+   if( $post_id != '') { $args['post__in'] = extract(",", $post_id );}
    
    $tm = "";
    $testimonials = new WP_Query($args);
-   if( $testimonials->have_posts() ):
-     if($view == 'table'){
-      include_once 'view/tp_table.php';
-     }
-     
+   if( $testimonials->have_posts() ):     
      if($view == 'list'){
       if($style == "one" ) include_once "view/list-one.php";
       if($style == "two" ) include_once "view/list-two.php";      
@@ -87,14 +83,12 @@ function slidingTestimonials($atts){
                     
    extract( shortcode_atts($defaults,$atts) );
    $args = array('post_type' => 'testimonial', 'posts_per_page' => $limit, 'orderby' => $orderby, 'order' => $order);
-   if( $post_id != '') { $args['p'] = $post_id;}
+   if( $post_id != '') { $args['post__in'] = extract(",", $post_id );}
    
    $tm = "";
    $testimonials = new WP_Query($args);
    if( $testimonials->have_posts() ):
       if($style == "one" ) include_once "view/slider/slider-one.php";
-      if($style == "two" ) include_once "view/slider/slider-two.php";
-      if($style == "three" ) include_once "view/slider/slider-three.php";
    endif;       
    wp_reset_postdata();   
    return $tm;     

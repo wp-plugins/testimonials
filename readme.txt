@@ -5,32 +5,50 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwe
 Tags: testimonials plugin, plugin, testimonials, client testimonails, widget
 Version: 3.0.1
 Requires at least: 3
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Testimonials Plugin v3.0.1
+Wordpress Testimonials Plugin
 
 == Description ==
 Testimonials is a WordPress plugin that allows you to manage and display testimonials for your blog, product or service. 
 It can be used to build your portfolio or to encourage readers to subscribe / buy your products.
 
-**[Download now!](http://downloads.wordpress.org/plugin/testimonials.zip)**
-
-Features:
+Free Features:
 
 * Responsive
 * HTML5 markup
 * Using Custom Post Type - Testimonial
-* There have 2 Layout - Listing & Tabular
+* There have 2 Layout - Listing & Slider
+* Slider with one style
 * 3 Skins
 * Sliding Testimonials using Flexslider 
 
-[Support](info@pwdtechnology.com) |
-[More Details](http://pwdtechnology.com/testimonials-plugin-for-wordpress-site/)
+All functionality are driven by shortcodes. Here is the shortcode syntax: 
+1. List View : 
+`[testimonials view=list style="one|two|three" orderby="date|rand|ID|title" 
+  order="DESC|ASC" post_id="" thumb="small|medium|large" limit="1|5|...|10|-1"]`
 
+2. Slider : 
+`[sliding_testimonials style="one" orderby="date|rand|ID|title" 
+    order="DESC|ASC" post_id="" thumb="small|medium|large" 
+    limit="1|5|...|10|-1" autoslide="true" animation="slide|fade" 
+    slideshowSpeed=7000 animationSpeed=600]`
 
+[Live Demo](http://demo.pwdtechnology.com/testimonialsplugin/) | [Support](info@pwdtechnology.com)
+
+**PRO Features:**
+*Responsive
+*3 layouts – List, Grid & Table
+*8 unique styles
+*Rotating testimonials (using flexslider)
+*600+ Google fonts are integrated. So you can choose appropriate font for name, position and testimonials content
+*Testimonials Design Platte – You do not need any custom code for design of your testimonials.
+*Shortcode – You can put the code any places ( pages/post/custom post type page/sidebar/footer/header)
+*Slider Settings
+ 
 == Installation ==
 
 1. Download the zip file.
@@ -41,17 +59,13 @@ using FTP. First Unzip the file, Connect to FTP and uplaod into /wp-content/plug
 5. Next create a page "Testimonials" and put the shortcode [testimonials]
 6. All are completed now
 
-You can add the shortcode any pages/post of your site. 
-
-More Details about Shortcode:
-
-1. List View : [testimonials view=list style="one|two|three" orderby="date|rand|ID|title" order="DESC|ASC" post_id="" thumb="small|medium|large" limit="1|5|...|10|-1"]
-2. Slider : [sliding_testimonials style="one" orderby="date|rand|ID|title" order="DESC|ASC" post_id="" thumb="small|medium|large" limit="1|5|...|10|-1" autoslide="true" animation="slide|fade" slideshowSpeed=7000 animationSpeed=600]
-
 
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= 3.0.1 - 15/05/2014 =
+Fix Flexslider JQuery Error
 
 = 3.0 - 09/02/2014 =
 * Feature - Responsive
