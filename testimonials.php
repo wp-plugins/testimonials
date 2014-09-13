@@ -46,7 +46,7 @@ function getTestimonials($atts){
   if ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
   $paged = intval( $paged );
    $args = array('post_type' => 'testimonial', 'posts_per_page' => $limit, 'orderby' => $orderby, 'order' => $order, 'paged' => $paged);
-   if( $post_id != '') { $args['p'] = $post_id;}
+   if( $post_id != '') { $args['post__in'] = extract(",", $post_id );}
    
    $tm = "";
    $testimonials = new WP_Query($args);
@@ -83,7 +83,7 @@ function slidingTestimonials($atts){
                     
    extract( shortcode_atts($defaults,$atts) );
    $args = array('post_type' => 'testimonial', 'posts_per_page' => $limit, 'orderby' => $orderby, 'order' => $order);
-   if( $post_id != '') { $args['p'] = $post_id;}
+   if( $post_id != '') { $args['post__in'] = extract(",", $post_id );}
    
    $tm = "";
    $testimonials = new WP_Query($args);
