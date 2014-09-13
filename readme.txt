@@ -26,28 +26,31 @@ Free Features:
 * 3 Skins
 * Sliding Testimonials using Flexslider 
 
-All functionality are driven by shortcodes. Here is the shortcode syntax: 
+All functionality are driven by shortcodes. Here is the shortcode syntax:
+ 
 1. List View : 
 `[testimonials view=list style="one|two|three" orderby="date|rand|ID|title" 
-  order="DESC|ASC" post_id="" thumb="small|medium|large" limit="1|5|...|10|-1"]`
+  order="DESC|ASC" post_id="" thumb="small|medium|large" 
+  limit="1|5|...|10|20|25|-1"]`
 
 2. Slider : 
 `[sliding_testimonials style="one" orderby="date|rand|ID|title" 
     order="DESC|ASC" post_id="" thumb="small|medium|large" 
-    limit="1|5|...|10|-1" autoslide="true" animation="slide|fade" 
+    limit="1|5|...|10|20|-1" autoslide="true" animation="slide|fade" 
     slideshowSpeed=7000 animationSpeed=600]`
 
 [Live Demo](http://demo.pwdtechnology.com/testimonialsplugin/) | [Support](info@pwdtechnology.com)
 
 **PRO Features:**
-*Responsive
-*3 layouts – List, Grid & Table
-*8 unique styles
-*Rotating testimonials (using flexslider)
-*600+ Google fonts are integrated. So you can choose appropriate font for name, position and testimonials content
-*Testimonials Design Platte – You do not need any custom code for design of your testimonials.
-*Shortcode – You can put the code any places ( pages/post/custom post type page/sidebar/footer/header)
-*Slider Settings
+
+* Responsive
+* 3 layouts – List, Grid & Table
+* 8 unique styles
+* Rotating testimonials (using flexslider)
+* 600+ Google fonts are integrated. So you can choose appropriate font for name, position and testimonials content
+* Testimonials Design Platte – You do not need any custom code for design of your testimonials.
+* Shortcode – You can put the code any places ( pages/post/custom post type page/sidebar/footer/header)
+* Slider Settings
  
 == Installation ==
 
