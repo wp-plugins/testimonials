@@ -44,12 +44,12 @@ All functionality are driven by shortcodes. Here is the shortcode syntax:
 **PRO Features:**
 
 * Responsive
-* 3 layouts – List, Grid & Table
+* 3 layouts - List, Grid & Table
 * 8 unique styles
 * Rotating testimonials (using flexslider)
 * 600+ Google fonts are integrated. So you can choose appropriate font for name, position and testimonials content
-* Testimonials Design Platte – You do not need any custom code for design of your testimonials.
-* Shortcode – You can put the code any places ( pages/post/custom post type page/sidebar/footer/header)
+* Testimonials Design Platte - You do not need any custom code for design of your testimonials.
+* Shortcode - You can put the code any places ( pages/post/custom post type page/sidebar/footer/header)
 * Slider Settings
  
 == Installation ==
@@ -67,8 +67,9 @@ using FTP. First Unzip the file, Connect to FTP and uplaod into /wp-content/plug
 
 == Changelog ==
 
-= 3.0.1 - 15/05/2014 =
+= 3.0.1 - 13/09/2014 =
 Fix Flexslider JQuery Error
+Fix Posts ID
 
 = 3.0 - 09/02/2014 =
 * Feature - Responsive
@@ -80,6 +81,7 @@ Fix Flexslider JQuery Error
 
 = 3.0.1 =
 Fix Flexslider JQuery Error
+Fix Posts ID
 
 = 3.0 =
 3.0 is a major update. Please keep a backup first and then install it.
