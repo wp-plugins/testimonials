@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwe
 Tags: testimonials plugin, plugin, testimonials, client testimonails, widget
 Version: 3.0.1
 Requires at least: 3
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -68,8 +68,8 @@ using FTP. First Unzip the file, Connect to FTP and uplaod into /wp-content/plug
 == Changelog ==
 
 = 3.0.1 - 13/09/2014 =
-Fix Flexslider JQuery Error
-Fix Posts ID
+* Fix Flexslider JQuery Error
+* Fix Posts ID
 
 = 3.0 - 09/02/2014 =
 * Feature - Responsive
