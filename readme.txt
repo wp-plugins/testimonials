@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=phpwe
 Tags: testimonials plugin, plugin, testimonials, client testimonails, widget
 Version: 3.0.1
 Requires at least: 3
-Tested up to: 4.1
+Tested up to: 4.2.3
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
